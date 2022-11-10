@@ -1,0 +1,35 @@
+general {
+        output_format = "i3bar"
+        colors = true
+        interval = 5
+}
+
+order += "wireless wlp9s0"
+order += "cpu_temperature 0"
+order += "memory"
+order += "time"
+order += "volume master"
+
+wireless wlp9s0 {
+    format_up = "WiFi: (%quality, %bitrate)"
+    format_down = "WiFi: down"
+}
+
+cpu_temperature 0 {
+    format = "CPU: %degrees C"
+    path = "/sys/devices/platform/coretemp.0/temp1_input"
+}
+
+memory {
+    format = "%percentage_used used, %percentage_free free, %percentage_shared shared"
+}
+
+time {
+    format = "%H:%M:%S %m-%d-%Y"
+}
+
+volume master {
+    format = "(%devicename): %volume"
+    format_muted = "muted (%volume)"
+    device = "default"
+}
