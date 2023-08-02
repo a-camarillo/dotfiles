@@ -59,6 +59,27 @@ return {
 		},
 	},
 	{
+		'folke/which-key.nvim',
+		event = "VeryLazy",
+		init = function()
+			vim.o.timeout=true
+			vim.o.timeoutlen=300
+		end,
+		opts = {},
+	},
+	{
 		'nvim-treesitter/nvim-treesitter',
 	},
+	{
+		'hrsh7th/nvim-cmp',
+		config = function()
+			require 'configs.completion'
+		end
+	},
+	-- Completion
+	{ 'hrsh7th/cmp-nvim-lsp' },
+	{ 'hrsh7th/cmp-buffer' },
+	{ 'hrsh7th/cmp-path' },
+	{ 'L3MON4D3/LuaSnip' },
+	{ 'saadparwaiz1/cmp_luasnip' },
 }
