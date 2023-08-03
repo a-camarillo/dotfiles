@@ -44,8 +44,8 @@ return {
 	},
 	{
 		'williamboman/mason.nvim',
-		cmd = "Mason",
-    	keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
+		cmd = 'Mason',
+    	keys = { { '<leader>cm', '<cmd>Mason<cr>', desc = 'Mason' } },
 		build = ':MasonUpdate',
 		dependencies = {
 			{
@@ -60,7 +60,7 @@ return {
 	},
 	{
 		'folke/which-key.nvim',
-		event = "VeryLazy",
+		event = 'VeryLazy',
 		init = function()
 			vim.o.timeout=true
 			vim.o.timeoutlen=300
@@ -82,4 +82,12 @@ return {
 	{ 'hrsh7th/cmp-path' },
 	{ 'L3MON4D3/LuaSnip' },
 	{ 'saadparwaiz1/cmp_luasnip' },
+
+	-- Terminal
+	{
+		'voldikss/vim-floaterm',
+		version = '*',
+		config = true,
+		keys = { { '<leader>tt', '<cmd>FloatermNew<CR>', desc = 'Floaterm' } },
+	},
 }

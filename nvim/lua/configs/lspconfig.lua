@@ -19,9 +19,11 @@ lspconfig.gopls.setup {
 
 -- python config
 lspconfig.pyright.setup{
+	capabilities = capabilities,
 }
 
 -- lua config
 lspconfig.lua_ls.setup {
+	capabilities = capabilities,
 }
 
