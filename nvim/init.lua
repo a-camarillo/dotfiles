@@ -19,4 +19,12 @@ vim.o.relativenumber = true
 
 vim.g.mapleader = ","
 
+-- Windows and Split --
+vim.keymap.set('n', '<leader>v', '<cmd>vsplit<cr>')
+vim.keymap.set('n', '<C-l>', '<C-w>l')
+vim.keymap.set('n', '<C-h>', '<C-w>h')
+vim.keymap.set('n', '<C-j>', '<C-w>j')
+vim.keymap.set('n', '<C-k>', '<C-w>k')
+
+
 require("lazy").setup("plugins")
