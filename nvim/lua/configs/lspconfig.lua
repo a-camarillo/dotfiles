@@ -27,3 +27,8 @@ lspconfig.lua_ls.setup {
 	capabilities = capabilities,
 }
 
+-- js/ts config
+lspconfig.tsserver.setup {
+	capabilities = capabilities,
+}
+
