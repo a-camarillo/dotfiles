@@ -54,6 +54,7 @@ return {
 					'lua_ls',
 					'gopls',
 					'pyright',
+					'arduino_language_server',
 				},
 			},
 		},

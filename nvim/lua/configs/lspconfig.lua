@@ -32,3 +32,16 @@ lspconfig.tsserver.setup {
 	capabilities = capabilities,
 }
 
+lspconfig.clangd.setup{
+	capabilities = capabilities,
+}
+
+lspconfig.arduino_language_server.setup {
+	cmd = {
+		"arduino-language-server",
+		"-cli-config", "/home/anthony/.config/.arduino15/arduino-cli.yaml",
+		"-fqbn", "arduino:avr:uno",
+		"-log"
+	}
+}
+
