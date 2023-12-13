@@ -11,9 +11,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 2
 
 vim.o.relativenumber = true
 
@@ -25,6 +24,10 @@ vim.keymap.set('n', '<C-l>', '<C-w>l')
 vim.keymap.set('n', '<C-h>', '<C-w>h')
 vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-k>', '<C-w>k')
+
+-- Lsp Stuff --
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
+vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 
 
 require("lazy").setup("plugins")
