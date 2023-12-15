@@ -32,6 +32,7 @@
 			libclang
 			nodePackages."pyright"
 			nodePackages."typescript-language-server"
+                        nodePackages."@astrojs/language-server"
 			gopls
 			rust-analyzer
 		];

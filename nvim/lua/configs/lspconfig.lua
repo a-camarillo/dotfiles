@@ -45,3 +45,6 @@ lspconfig.arduino_language_server.setup {
 	}
 }
 
+lspconfig.astro.setup {
+  capabilities = capabilities,
+}
