@@ -30,6 +30,7 @@
 		extraPackages = with pkgs; [
 			# language servers
 			libclang
+                        lua-language-server
 			nodePackages."pyright"
 			nodePackages."typescript-language-server"
                         nodePackages."@astrojs/language-server"

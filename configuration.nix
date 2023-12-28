@@ -24,6 +24,16 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # flatpak
+  services.flatpak.enable = true;
+
+  # containers
+  virtualisation.docker.enable = true;
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
+
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
 
@@ -54,6 +64,10 @@
     layout = "us";
     xkbVariant = "";
   };
+  # sway related
+  hardware.opengl.enable = true;
+  hardware.opengl.driSupport = true;
+  security.polkit.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -85,7 +99,7 @@
   users.users.anthony = {
     isNormalUser = true;
     description = "anthony";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       firefox
       neovim
