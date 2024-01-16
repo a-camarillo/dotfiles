@@ -23,6 +23,8 @@
 	./alacritty.nix
 	./neovim.nix
         ./git.nix
+        ./sway.nix
+        ./vscode.nix
 	];
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -45,6 +47,7 @@
   #
   home.sessionVariables = {
     EDITOR = "nvim";
+    WLR_NO_HARDWARE_CURSORS = "1";
   };
   
   # This value determines the Home Manager release that your configuration is

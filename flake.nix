@@ -11,20 +11,30 @@
 		let 
 			lib = nixpkgs.lib;
 			system = "x86_64-linux";
-			pkgs = nixpkgs.legacyPackages.${system};
+			pkgs = import nixpkgs {
+                          system = system;
+                          config.allowUnfreePredicate = _: true;
+                        };
 		in { 
 		nixosConfigurations = {
 			nixos = lib.nixosSystem {
 				inherit system;
-				modules = [ ./configuration.nix ];
+				modules = [ 
+                                  ./configuration.nix 
+                                  home-manager.nixosModules.home-manager
+                                  {
+                                    home-manager.useGlobalPkgs = true;
+                                    home-manager.useUserPackages = true;
+                                  }
+                                ];
 			};
 		};
 		homeConfigurations = {
 			anthony = home-manager.lib.homeManagerConfiguration {
-				inherit pkgs;
+                                inherit pkgs;
 				modules = [ ./home.nix ];
-				};
 			};
-	};
+                };
+	      };
 }
 
