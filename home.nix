@@ -30,6 +30,7 @@
   # environment.
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
+        nodejs_21
   	lazygit
   	(nerdfonts.override { fonts = [ "JetBrainsMono"]; })	
   ];
