@@ -1,16 +1,16 @@
 return {
 	{
-	'folke/tokyonight.nvim',
+	'rebelot/kanagawa.nvim',
 	lazy = false,
 	priority = 1000,
 	config = function()
 	-- load the colorscheme here
-	vim.cmd([[colorscheme tokyonight]])
+	vim.cmd([[colorscheme kanagawa-dragon]])
 	end
 	},
 	{
 		'nvim-lualine/lualine.nvim',
-		opts = { theme = 'tokyonight' },
+		opts = { theme = 'kanagawa-dragon' },
 		dependencies = { 'nvim-tree/nvim-web-devicons' },
 	},
 	{
@@ -68,9 +68,9 @@ return {
 		end,
 		opts = {},
 	},
-	{
-		'nvim-treesitter/nvim-treesitter',
-	},
+--	{
+--		'nvim-treesitter/nvim-treesitter',
+--	},
 	{
 		'hrsh7th/nvim-cmp',
 		config = function()
@@ -81,7 +81,10 @@ return {
 	{ 'hrsh7th/cmp-nvim-lsp' },
 	{ 'hrsh7th/cmp-buffer' },
 	{ 'hrsh7th/cmp-path' },
-	{ 'L3MON4D3/LuaSnip' },
+--	{ 'L3MON4D3/LuaSnip',
+--          version = "v2.*",
+--          build = "make install_jsregexp"
+--        },
 	{ 'saadparwaiz1/cmp_luasnip' },
 
 	-- Terminal

@@ -21,7 +21,7 @@
 
 			# telescope
 			vimPlugins.telescope-nvim
-			vimPlugins.tokyonight-nvim 
+			vimPlugins.kanagawa-nvim 
 
 			vimPlugins.lualine-nvim
 			vimPlugins.vim-floaterm
