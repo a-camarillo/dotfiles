@@ -1,5 +1,4 @@
 { config, fonts, pkgs, ... }:
-
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -20,20 +19,35 @@
 
   imports = [
   	./bash.nix
-	./alacritty.nix
-	./neovim.nix
         ./git.nix
+        ./kitty.nix
+	./neovim.nix
         ./sway.nix
-        ./vscode.nix
 	];
   # The home.packages option allows you to install Nix packages into your
   # environment.
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
-        nodejs_21
-  	lazygit
+        poetry
+        neofetch
+  	
+        lazygit
   	(nerdfonts.override { fonts = [ "JetBrainsMono"]; })	
   ];
+
+  programs.tmux = {
+    enable = true;
+    extraConfig = ''
+      set -g default-terminal "tmux"
+    '';
+  };
+
+  programs.tmate = {
+    enable = true;
+    extraConfig = ''
+      set -g default-terminal "tmate"
+    '';
+  };
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. If you don't want to manage your shell through Home
@@ -48,7 +62,6 @@
   #
   home.sessionVariables = {
     EDITOR = "nvim";
-    WLR_NO_HARDWARE_CURSORS = "1";
   };
   
   # This value determines the Home Manager release that your configuration is
