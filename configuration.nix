@@ -24,9 +24,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # flatpak
-  services.flatpak.enable = true;
-
   # containers
   virtualisation.docker.enable = true;
   virtualisation.docker.rootless = {
