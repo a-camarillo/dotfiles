@@ -1,0 +1,60 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: JetBrains Nerd Font Mono;
+  font-size: 15px;
+}
+
+window#waybar {
+  background-color: rgba(base0E, 1.0);
+}
+
+window#waybar.empty #window {
+  background: rgba(0,0,0,0);
+}
+
+#waybar > .horiztontal > .horizontal:nth-child(1) {
+  margin-right: 10px;
+}
+
+#workspaces button {
+  margin: 5px;
+  padding: 2px;
+  font-size: 12px;}
+
+#mode {
+  margin: 10px 0 0 10px;
+  border-radius: 5px;
+}
+
+label#window,
+#network,
+#memory,
+#battery,
+#clock {
+  margin: 5px;
+  padding: 7px 15px;
+}
+
+label#window,
+#network,
+#memory,
+#battery,
+#clock {
+  background: rgba(base06, 0.9);
+  color: rgba(base0F, 1.0);
+}
+
+#workspaces button {
+  background: rgba(base09, 0.9);
+  color: rgba(base00, 0.9);
+}
+
+#workspaces button:hover {
+  background: rgba(base03, 0.4);
+}
+#workspaces button.focused {
+  background: rgba(base06, 1.0);
+  color: rgba(base0F, 1.0);
+}
+

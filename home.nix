@@ -15,14 +15,13 @@
   home.username = "anthony";
   home.homeDirectory = "/home/anthony";
   
-  home.file.".background-image".source = ./background-image;
-
   imports = [
   	./bash.nix
         ./git.nix
         ./kitty.nix
 	./neovim.nix
-        ./sway.nix
+        ./sway/sway.nix
+        ./sway/waybar.nix
 	];
   # The home.packages option allows you to install Nix packages into your
   # environment.
