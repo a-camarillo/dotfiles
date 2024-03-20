@@ -7,7 +7,7 @@
 		};
                 theme = "kanagawabones";
                 settings = {
-                  remember_window_size = false;
+                  background_opacity = "0.9"; 
                 };
 	};
 }
