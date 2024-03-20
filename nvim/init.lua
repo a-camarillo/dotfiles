@@ -29,5 +29,7 @@ vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
 vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 
+-- Clipboard --
+vim.opt.clipboard = "unnamedplus"
 
 require("lazy").setup("plugins")
