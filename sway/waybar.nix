@@ -2,7 +2,7 @@
 {
   imports = [
     nix-colors.homeManagerModule
-    ./colorScheme.nix
+    ../colorScheme.nix
   ];
   
   programs.waybar.enable = true;
