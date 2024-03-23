@@ -12,6 +12,10 @@
 
   #laptop output
   wayland.windowManager.sway.config.output = {
+    Virtual-1 = {
+      mode = "1920x1440@60Hz";
+      background = "~/dotfiles/gobirds.png fill";
+    };
     eDP-1 = {
       background = "~/dotfiles/gobirds.png fill";
     };

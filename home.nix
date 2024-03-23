@@ -22,6 +22,7 @@
 	./neovim.nix
         ./sway/sway.nix
         ./sway/waybar.nix
+        ./i3/i3.nix
 	];
   # The home.packages option allows you to install Nix packages into your
   # environment.

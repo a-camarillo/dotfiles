@@ -18,10 +18,21 @@
                         };
 		in { 
 		nixosConfigurations = {
-			nixos = lib.nixosSystem {
+			hp-laptop = lib.nixosSystem {
 				inherit system;
 				modules = [ 
-                                  ./configuration.nix 
+                                  ./hosts/nixos-hp-laptop 
+                                  home-manager.nixosModules.home-manager
+                                  {
+                                    home-manager.useGlobalPkgs = true;
+                                    home-manager.useUserPackages = true;
+                                  }
+                                ];
+			};
+			virtualbox = lib.nixosSystem {
+				inherit system;
+				modules = [ 
+                                  ./hosts/nixos-virtualbox
                                   home-manager.nixosModules.home-manager
                                   {
                                     home-manager.useGlobalPkgs = true;
