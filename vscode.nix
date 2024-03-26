@@ -3,7 +3,7 @@
     enable = true;
     userSettings = {
       editor = {
-        fontFamily = "JetBrainsMono"; 
+        fontFamily = "JetBrainsMono";
       };
       workbench = {
         colorTheme = "Solarized Dark";

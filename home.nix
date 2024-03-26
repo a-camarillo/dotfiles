@@ -1,5 +1,9 @@
-{ config, fonts, pkgs, ... }:
 {
+  config,
+  fonts,
+  pkgs,
+  ...
+}: {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
@@ -9,30 +13,30 @@
     enableBashIntegration = true;
     nix-direnv.enable = true;
   };
-  
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "anthony";
   home.homeDirectory = "/home/anthony";
-  
+
   imports = [
-  	./bash.nix
-        ./git.nix
-        ./kitty.nix
-	./neovim.nix
-        ./sway/sway.nix
-        ./sway/waybar.nix
-        ./i3/i3.nix
-	];
+    ./bash.nix
+    ./git.nix
+    ./kitty.nix
+    ./neovim.nix
+    ./sway/sway.nix
+    ./sway/waybar.nix
+    ./i3/i3.nix
+  ];
   # The home.packages option allows you to install Nix packages into your
   # environment.
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
-        poetry
-        neofetch
-  	
-        lazygit
-  	(nerdfonts.override { fonts = [ "JetBrainsMono"]; })	
+    poetry
+    neofetch
+
+    lazygit
+    (nerdfonts.override {fonts = ["JetBrainsMono"];})
   ];
 
   programs.tmux = {
@@ -63,7 +67,7 @@
   home.sessionVariables = {
     EDITOR = "nvim";
   };
-  
+
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
