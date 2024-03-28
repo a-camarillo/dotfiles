@@ -1,7 +1,7 @@
 local kanagawa = require 'kanagawa'
 local lualine = require 'lualine'
 
--- lualine.setup {options = {theme = 'kanagawa-dragon'}}
+lualine.setup {}
 
 kanagawa.setup {theme = "dragon"}
 
