@@ -36,7 +36,11 @@
         config = toLuaFile ./pozole/floaterm.lua;
       }
 
-      nvim-treesitter.withAllGrammars
+      {
+        plugin = nvim-treesitter.withAllGrammars;
+        config = toLuaFile ./pozole/treesitter.lua;
+      }
+
       lualine-nvim
 
       cmp-nvim-lsp
