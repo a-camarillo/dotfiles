@@ -19,10 +19,10 @@ in {
     "${mod}+Return" = "exec ${pkgs.kitty}/bin/kitty";
     "${mod}+Shift+q" = "kill";
 
-    "${mod}+Shift+h" = "focus left";
-    "${mod}+Shift+j" = "focus down";
-    "${mod}+Shift+k" = "focus up";
-    "${mod}+Shift+l" = "focus right";
+    "${mod}+h" = "focus left";
+    "${mod}+j" = "focus down";
+    "${mod}+k" = "focus up";
+    "${mod}+l" = "focus right";
 
     "${mod}+Shift+c" = "reload";
     "${mod}+Shift+r" = "restart";
@@ -51,6 +51,24 @@ in {
 
     "${mod}+d" = "exec ${pkgs.dmenu}/bin/dmenu -show drun";
   };
-
+  
+  services.autorandr.enable = true;
+  programs.autorandr.enable = true;
+  programs.autorandr.profiles = {
+    default = {
+      config = {
+        "Virtual1" = {
+          enable = true;
+          dpi = 96;
+          mode = "1920x1080";
+          primary = true;
+          rate = "59.96";
+        };
+      };
+      fingerprint = {
+        "Virtual1" = "--CONNECTED-BUT-EDID-UNAVAILABLE--Virtual1"; 
+      };
+    };
+  };
   home.file."background-image".source = ../gobirds.png;
 }
