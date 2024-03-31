@@ -42,7 +42,14 @@
   programs.tmux = {
     enable = true;
     extraConfig = ''
+      set-option -g prefix C-a
       set -g default-terminal "tmux"
+      set -sg escape-time 0
+
+      set -g base-index 1
+      setw -g pane-base-index 1
+      set-option -g focus-events on
+      set-option -g history-limit 4000
     '';
   };
 
