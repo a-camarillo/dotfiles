@@ -22,13 +22,19 @@
 
       modules-right = [
         "tray"
+        "bluetooth"
         "network"
         "memory"
         "battery"
         "clock"
       ];
 
+      bluetooth.format-on = "󰂯 not connected";
+      bluetooth.format-connceted = "󰂯 {device_alias}";
+      bluetooth.format-conencted-battery = "󰂯 {device_alias} {device_battery_percentage}%";
+
       network.format-wifi = "  {signalStrength}% {essid}";
+      network.format-disconnected = "  not connected";
       network.format-ethernet = "{icon}";
       network.format-icons.wifi = "";
       network.on-click = "kitty -e nmtui";

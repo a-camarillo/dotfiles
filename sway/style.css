@@ -28,6 +28,7 @@ window#waybar.empty #window {
 }
 
 label#window,
+#bluetooth,
 #network,
 #memory,
 #battery,
@@ -37,6 +38,7 @@ label#window,
 }
 
 label#window,
+#bluetooth,
 #network,
 #memory,
 #battery,
