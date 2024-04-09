@@ -12,7 +12,7 @@ lspconfig.gopls.setup {
             analyses = {unusedparams = true}
         }
     }
-} 
+}
 -- python config
 lspconfig.pyright.setup {capabilities = capabilities}
 -- lua config

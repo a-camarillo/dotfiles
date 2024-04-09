@@ -25,11 +25,13 @@ local function set_vim_keymaps()
     vim.keymap.set('n', '<C-h>', '<C-w>h', options_noremap)
     vim.keymap.set('n', '<C-j>', '<C-w>j', options_noremap)
     vim.keymap.set('n', '<C-k>', '<C-w>k', options_noremap)
-    
+
     -- Telescope
-    vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>', options_remap)
-    vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', options_remap)
-   
+    vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>',
+                   options_remap)
+    vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>',
+                   options_remap)
+
     -- Floaterm
     vim.keymap.set('n', '<leader>tt', '<cmd>FloatermNew<CR>', options_remap)
 
@@ -38,7 +40,6 @@ local function set_vim_keymaps()
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 end
-
 
 set_vim_g()
 set_vim_o()
