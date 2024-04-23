@@ -49,7 +49,7 @@ in {
     "${mod}+Shift+9" = "move container to workspace number 9";
     "${mod}+Shift+10" = "move container to workspace number 10";
 
-    "${mod}+d" = "exec ${pkgs.dmenu}/bin/dmenu -show drun";
+    "${mod}+d" = "exec ${pkgs.rofi}/bin/rofi -show run";
   };
   
   services.autorandr.enable = true;
