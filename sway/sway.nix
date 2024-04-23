@@ -8,6 +8,7 @@
   wayland.windowManager.sway.config.modifier = "Mod4";
   wayland.windowManager.sway.config.terminal = "${pkgs.kitty}/bin/kitty";
   wayland.windowManager.sway.config.bars = [{command = "${config.programs.waybar.package}/bin/waybar";}];
+  wayland.windowManager.sway.config.menu = "${pkgs.wofi}/bin/wofi --show drun";
 
   # gaps
   wayland.windowManager.sway.config.gaps.smartGaps = true;
