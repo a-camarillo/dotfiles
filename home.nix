@@ -34,6 +34,7 @@
   home.packages = with pkgs; [
     poetry
     neofetch
+    gimp
 
     lazygit
     (nerdfonts.override {fonts = ["JetBrainsMono"];})
