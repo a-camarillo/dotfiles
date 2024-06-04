@@ -32,6 +32,7 @@
   # environment.
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
+    vscode
     poetry
     neofetch
     gimp
