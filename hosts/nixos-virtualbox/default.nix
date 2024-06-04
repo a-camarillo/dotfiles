@@ -56,30 +56,33 @@
   # xserver related
   services.xserver = {
     enable = true;
-    xkb.layout = "us";
-    videoDrivers = ["nvidia"];
-    desktopManager = {
-      xterm.enable = false;
-      wallpaper.mode = "fill";
-    };
-    displayManager = {
-      autoLogin = {
-        enable = true;
-        user = "anthony";
-      };
-      defaultSession = "none+i3";
-      lightdm.enable = true;
-    };
-    windowManager.i3 = {
-      enable = true;
-      package = pkgs.i3-gaps;
-      extraPackages = with pkgs; [
-        dmenu
-        i3status
-        i3lock
-      ];
-    };
+#    xkb.layout = "us";
+#    videoDrivers = ["nvidia"];
+#    desktopManager = {
+#      xterm.enable = false;
+#      wallpaper.mode = "fill";
+#    };
+#    displayManager = {
+#      autoLogin = {
+#        enable = true;
+#        user = "anthony";
+#      };
+#      defaultSession = "plasmax11";
+#     lightdm.enable = true;
+#    };
+#    windowManager.i3 = {
+#      enable = true;
+#      package = pkgs.i3-gaps;
+#      extraPackages = with pkgs; [
+#        dmenu
+#        i3status
+#        i3lock
+#      ];
+#    };
   };
+
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
